@@ -401,12 +401,11 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
+  // Sushma's edit code:
   async function wordOfDayFetch() {
     const apiKey = 'd9fa3c0640044896093740422b6070ca8e8ae9817446fe52d';
     let response = await fetch(`https://api.wordnik.com/v4/words.json/wordOfTheDay?api_key=${apiKey}`);
-    // console.log(await response.json());
     const wordJSON = await response.json();
-    console.log(wordJSON);
     return wordJSON;
   }
 
@@ -429,6 +428,8 @@ document.addEventListener('DOMContentLoaded', function() {
       })
     }
   })
-  .catch(alert);
+  .catch(() => {
+      document.querySelector('#word-date').textContent = 'Error! Sorry, no word of the day :(';
+  });
 
 });
