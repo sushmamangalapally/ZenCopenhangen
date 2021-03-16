@@ -4951,7 +4951,7 @@ section#main-content a:hover {
 
 
 
-@media (min-width: 692px) {
+@media (max-width: 770px) {
   .recent-activity-item {
     width: 95%;
   }
