@@ -4861,19 +4861,17 @@ section a.recent-activity-item-parent:hover {
   }
 }
 .community {
-  padding: 30px 0px 0px 0px;
+  padding: 30px 0 0 0;
 }
 
 @media (min-width: 768px) {
   .section {
-      margin-bottom: 0px;
+      margin-bottom: 0;
   }
 }
 
 .homepage-container {
-  padding-left: 0px;
-  padding-top: 0px;
-  padding: 0px;
+  padding: 0;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -4905,10 +4903,10 @@ div.container div.side-bar {
 
 div.section-main-container {
   padding-top: 25px;
-  margin-left: 5px;
+  padding-right: 0;
   width: 75%;
+  margin-left: 5px;
   margin-right: 0;
-  padding-right: 0px;
 }
 
 p.word-title {
@@ -4930,4 +4928,23 @@ ul#word-definition {
   padding: 0;
   font-size: 12px;
   text-align: left;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+section#main-content div.scroll-down {
+  position: relative;
+  top: 50%;
+}
+
+section#main-content a {
+  color: white;
+  font-weight: 700;
+  font-size: 1.25em;
+}
+
+section#main-content a:hover {
+  text-decoration: none;
 }

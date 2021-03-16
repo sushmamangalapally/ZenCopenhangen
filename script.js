@@ -432,4 +432,12 @@ document.addEventListener('DOMContentLoaded', function() {
       document.querySelector('#word-date').textContent = 'Error! Sorry, no word of the day :(';
   });
 
+  function scrollingDown(e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+  }
+  const scrollClick = document.querySelector('a[href="#scrollToHomepageContainer"]');
+  scrollClick.addEventListender('click', scrollingDown);
+
 });
