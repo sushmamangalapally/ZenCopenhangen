@@ -438,6 +438,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
   }
   const scrollClick = document.querySelector('a[href="#scrollToHomepageContainer"]');
-  scrollClick.addEventListender('click', scrollingDown);
+  scrollClick.addEventListener('click', scrollingDown);
 
 });
