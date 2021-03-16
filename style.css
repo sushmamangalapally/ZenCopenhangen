@@ -4931,7 +4931,7 @@ ul#word-definition {
 }
 
 .section {
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 section#main-content div.scroll-down {
@@ -4947,4 +4947,12 @@ section#main-content a {
 
 section#main-content a:hover {
   text-decoration: none;
+}
+
+
+
+@media (min-width: 692px) {
+  .recent-activity-item {
+    width: 95%;
+  }
 }
