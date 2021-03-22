@@ -5131,3 +5131,9 @@ nav.user-nav a:hover, a[class="sign-in"]:hover {
     min-height: 100%;
 	}
 }
+@media only screen and (max-width: 760px) {
+  .hero-title {
+      font-size: 1.7em;
+      line-height: 1.11;
+  }
+}
