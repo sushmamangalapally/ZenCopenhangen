@@ -432,12 +432,34 @@ document.addEventListener('DOMContentLoaded', function() {
       document.querySelector('#word-date').textContent = 'Error! Sorry, no word of the day :(';
   });
 
-  function scrollingDown(e) {
-    e.preventDefault();
-    const href = this.getAttribute('href');
-    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
-  }
-  const scrollClick = document.querySelector('a[href="#scrollToHomepageContainer"]');
-  scrollClick.addEventListener('click', scrollingDown);
+  window.onscroll = function() {
+    displayButtonWhenScroll()
+  };
+  
+  document.onscroll = function() {
+    displayButtonWhenScroll()
+  };
 
+  function displayButtonWhenScroll() {
+    const scrollToTopBtn = document.querySelector("#scrollTop");
+    if (scrollToTopBtn) {
+      const heightWhenToScroll = document.documentElement.scrollHeight-1000
+
+      if (document.body.scrollTop > heightWhenToScroll || document.documentElement.scrollTop > heightWhenToScroll) {
+        scrollToTopBtn.style.display = "block";
+      } else {
+        scrollToTopBtn.style.display = "none";
+      }
+    }
+  }
+
+  function scrollToTheTop() {
+    document.querySelector('body').scrollIntoView({
+      behavior: "smooth"
+    });
+  }
+  const scrollTopBtn = document.querySelector("#scrollTop");
+  if (scrollTopBtn) {
+    scrollTopBtn.addEventListener("click", scrollToTheTop);
+  }
 });
